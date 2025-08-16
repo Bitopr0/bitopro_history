@@ -1,0 +1,288 @@
+/* 🌐 全域設定 */
+html,
+body {
+  margin: 0;
+  height: 900px;
+}
+
+body {
+  font-family: 'Anuphan', sans-serif;
+  font-weight: 350;
+  background-color: #10141F;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* 🧱 應用容器 */
+.應用容器 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  height: 900px;
+}
+
+/* 📜 歷史表頭 */
+.歷史表頭 {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.關閉按鈕 {
+  position: absolute;
+  right: 16px;
+  font-size: 32px;
+  font-weight: 100;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+/* 📂 選項卡 */
+.選項卡區塊 {
+  display: flex;
+  justify-content: space-around;
+  padding: 17px 0 0;
+  background: transparent;
+}
+
+.選項卡 {
+  color: #aaa;
+  font-size: 16px;
+  line-height: 1;
+  padding-bottom: 2px;
+}
+
+.選項卡.啟用 {
+  color: #fff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 16px;
+}
+
+/* 🧩 內容容器 */
+.內容容器 {
+  flex: 1;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.內容卡片 {
+  background-color: #1B1F28;
+  border-radius: 16px;
+  height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ⚠️ 提示框 */
+.提示框 {
+  background-color: #2C2D2F;
+  color: #ebbc66;
+  height: 30px;
+  font-size: 13px;
+  padding: 10px 16px;
+  border-radius: 7px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+
+.提示框左側 {
+  display: flex;
+  align-items: center;
+}
+
+.感嘆號圖示 {
+  width: 15px;
+  height: 15px;
+  background-color: #FA6E00;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50%;
+  line-height: 17px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.下拉箭頭圖示 {
+  width: 7px;
+  height: 7px;
+  border: solid #f0c040;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+/* 🏷 標題與篩選器 */
+.標題列 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.篩選圖示 svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.篩選區塊 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #73787E;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.篩選表頭,
+.篩選內容 {
+  margin: 0;
+}
+
+/* 📄 紀錄清單與項目 */
+.紀錄項目 {
+  padding: 12px 0;
+  border-bottom: 1px solid #3D414A;
+  font-size: 13px;
+}
+
+#紀錄清單 {
+  max-height: 800px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#紀錄清單::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* 🧮 列排版 */
+.紀錄列 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.幣種圖示 {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.紀錄文字區塊 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.幣種文字 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #eee;
+  line-height: 1.5;
+}
+
+.時間文字 {
+  font-size: 13px;
+  color: #9CA0A9;
+  margin-top: 6px;
+}
+
+.右側資訊 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.金額文字 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #eee;
+  margin-bottom: 4px;
+}
+
+/* ⌛ 狀態指示 */
+.狀態.處理中,
+.狀態.已完成 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #9CA0A9;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.狀態.處理中::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #E4852C;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.狀態.已完成::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #01B1BA;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media (min-width: 1024px) {
+  .紀錄列 {
+    gap: 8px;
+    /* 原本是12或16，這裡調小距離 */
+    align-items: center;
+  }
+
+  .紀錄文字區塊 {
+    margin-left: 4px;
+    /* 原本是8或16，讓文字靠近圖示 */
+  }
+
+  .幣種圖示 {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .右側資訊 {
+    margin-left: auto;
+    /* 保持靠右，但不擠壓左側 */
+  }
+
+  .幣種文字,
+  .時間文字 {
+    text-align: left;
+  }
+}

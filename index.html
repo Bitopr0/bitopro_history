@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="BitoPro">
+    <link rel="apple-touch-icon" href="res/BitoPro.png">
+    <link rel="icon" type="image/x-icon" href="res/BitoPro.png" />
+    <meta charset="UTF-8">
+
+    <title>提領紀錄</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+</head>
+
+<body>
+    <div class="應用容器">
+        <div class="歷史表頭">
+            <span>歷史記錄</span>
+            <span class="關閉按鈕">&times;</span>
+        </div>
+
+        <div class="選項卡區塊">
+            <div class="選項卡">加值</div>
+            <div class="選項卡 啟用">提領</div>
+            <div class="選項卡">現貨交易</div>
+            <div class="選項卡">一鍵買賣</div>
+            <div class="選項卡">定期定額</div>
+        </div>
+
+        <div class="內容容器">
+            <div class="內容卡片">
+                <div class="提示框">
+                    <div class="提示框左側">
+                        <span class="感嘆號圖示">!</span>
+                        <span class="提示文字">提領新台幣、加密貨幣，何時到帳？</span>
+                    </div>
+                    <span class="下拉箭頭圖示"></span>
+                </div>
+
+                <div class="標題列">
+                    <span>近 100 筆紀錄</span>
+                    <span class="篩選圖示">
+                        <svg viewBox="0 0 16 16">
+                            <path d="M2 3h12v2H2V3z M4 7h8v2H4V7z M6 11h4v2H6V11z" />
+                        </svg>
+                    </span>
+                </div>
+
+                <div class="篩選區塊">
+                    <div class="篩選表頭">幣種</div>
+                    <div class="篩選內容">數量 / 狀態</div>
+                </div>
+
+                <!-- 紀錄清單 -->
+                <div id="紀錄清單"></div>
+
+                <div class="遮罩層" id="遮罩背景" style="display:none;"></div>
+                <div class="彈窗區塊" id="提領彈窗" style="display:none;">
+                    <div class="彈窗表頭">
+                        <span>提領明細</span>
+                        <span class="關閉按鈕" id="關閉彈窗">&times;</span>
+                    </div>
+                    <div class="跳轉區塊">
+                        <a href="page/Bitopro copy.html" class="跳轉按鈕"></a>
+                    </div>
+                    <div class="彈窗列" id="彈窗明細"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="Script/script.js"></script>
+    <script src="Script/popup.js"></script>
+</body>
+
+</html>
