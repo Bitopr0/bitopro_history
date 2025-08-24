@@ -90,6 +90,17 @@ function 建立紀錄(幣種, 時間, 金額, 狀態類型, 狀態文字, 索引
     e.stopPropagation();
     顯示彈窗(項目.querySelector('.紀錄列'));
   };
+  // 綁定右側金額點擊事件（修改金額）
+  項目.querySelector('.時間文字').onclick = function (e) {
+    e.stopPropagation();
+    const 時間元素 = this.querySelector('.時間文字');
+    // 取得純數字部分（去掉逗號、小數點、單位）
+    let currentAmount = 時間元素.textContent.replace(/,/g, '').replace(/\.\d+/, '').replace(/ [A-Z]+$/, '');
+    let newAmount = prompt('請輸入新金額（不含小數）：', currentAmount);
+    if (newAmount !== null) {
+      時間元素.textContent = newAmount;
+    }
+  };
 }
 
 // ⌛ 初始化第一筆資料
@@ -138,6 +149,7 @@ document.getElementById('關閉彈窗').onclick = function () {
   document.getElementById('遮罩背景').style.display = 'none';
   document.getElementById('提領彈窗').style.display = 'none';
 };
+
 
 
 
